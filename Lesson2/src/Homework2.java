@@ -61,6 +61,7 @@ public class Homework2 {
      * Method should return 3
      */
     public static double average(int[] array) {
+
         int sum = 0;
         for (int value : array) {
             sum += value;
