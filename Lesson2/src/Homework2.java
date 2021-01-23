@@ -20,11 +20,13 @@ public class Homework2 {
      **/
     public static int sum(int a, int b) {
         int x = a + b;
-        int z = Integer.MAX_VALUE + Integer.MAX_VALUE;
-            if(x > z)
-                 return x;
-            else
-                 return -1;
+        int z = 0;
+        long y = Integer.MAX_VALUE + Integer.MAX_VALUE;
+        z = (int) y;
+        if (x > z)
+            return x;
+        else
+            return -1;
     }
 
     /**
@@ -47,7 +49,7 @@ public class Homework2 {
         if (a < b)
             max = b;
         else
-                max = a;
+            max = a;
         return max;
     }
 
@@ -60,10 +62,10 @@ public class Homework2 {
      */
     public static double average(int[] array) {
         int sum = 0;
-        for (int value : array){
+        for (int value : array) {
             sum += value;
         }
-        return (double) sum/array.length;
+        return (double) sum / array.length;
     }
 
     /**
@@ -72,8 +74,8 @@ public class Homework2 {
      **/
     public static int max(int[] array) {
         int max = array[0];
-        for (int j = 1; j < array.length; j++){
-            if (array[j] > max){
+        for (int j = 1; j < array.length; j++) {
+            if (array[j] > max) {
                 max = array[j];
             }
         }
@@ -100,12 +102,12 @@ public class Homework2 {
         System.out.println("Enter first side triagle:");
         Scanner alpha = new Scanner(System.in);
 
-        double bravo = alpha.nextDouble();
+        int bravo = alpha.nextInt();
 
         System.out.println("Enter second side of triagle:");
-        double charlie = alpha.nextDouble();
+        int charlie = alpha.nextInt();
 
-        double delta =(Math.pow(bravo,2)) + (Math.pow(charlie,2));
+        double delta = ((Math.pow(bravo, 2)) + (Math.pow(charlie, 2)));
 
         return sqrt(delta);
     }
