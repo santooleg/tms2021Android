@@ -20,13 +20,16 @@ public class Homework2 {
      **/
     public static int sum(int a, int b) {
         int x = a + b;
-        int z = 0;
-        long y = Integer.MAX_VALUE + Integer.MAX_VALUE;
-        z = (int) y;
-        if (x > z)
-            return x;
-        else
+
+        int i = Integer.MAX_VALUE;
+        long l = (long) (i);
+        long y = i + l;
+
+        if (x > Integer.MAX_VALUE)
+
             return -1;
+        else
+            return x;
     }
 
     /**
