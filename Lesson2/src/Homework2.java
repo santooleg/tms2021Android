@@ -19,17 +19,14 @@ public class Homework2 {
      * 2. (optional) if sum of a and b is more then int can store -- return -1;
      **/
     public static int sum(int a, int b) {
-        int x = a + b;
+        int x = (int) ((long)a + b);
+        long y = (long)Integer.MAX_VALUE + Integer.MAX_VALUE;
 
-        int i = Integer.MAX_VALUE;
-        long l = (long) (i);
-        long y = i + l;
-
-        if (x > Integer.MAX_VALUE)
-
-            return -1;
-        else
+        if (y > x)
             return x;
+        else
+            return -1;
+
     }
 
     /**

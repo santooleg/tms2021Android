@@ -62,7 +62,7 @@ public class Practice {
                      //00000001 1
                      //00000000 0
                      //11111111 -1
-                    //100000    -128
+                    //100000000    -128
 
         System.out.println(~bb);
 
@@ -105,7 +105,7 @@ public class Practice {
 
      */
 
-        //massivy
+    //massivy
     public static void main(String[] args) {
         int[] array = {1, 5, 44, 55};
         int sum = 0;
@@ -114,7 +114,7 @@ public class Practice {
             sum += element;
         }
         */
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
         System.out.println(sum);
