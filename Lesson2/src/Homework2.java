@@ -26,6 +26,7 @@ public class Homework2 {
             return x;
         else
             return -1;
+
     }
 
     /**
