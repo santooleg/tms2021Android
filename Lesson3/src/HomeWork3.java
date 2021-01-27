@@ -40,18 +40,21 @@ public class HomeWork3 {
      */
     public static void foobar(int number) {
 
+
         if (number % 3 == 0) {
             System.out.println("foo");
 
         }
-        if (number % 5 == 0) {
+        else if (number % 5 == 0) {
             System.out.println("bar");
 
         }
-        if ((number % 3 == 0) && (number % 5 == 0)) {
+        else if ((number % 3 == 0) && (number % 5 == 0)) {
             System.out.println("foobar");
 
+
         }
+
     }
 
     /**
