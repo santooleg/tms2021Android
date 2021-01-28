@@ -99,9 +99,9 @@ public class HomeWork3 {
         String[][] matrix1 = new String[higth][wigth];
 
 
-        for (String[] row1 : matrix1) {
-            for (int i = 0; i < row1.length; i++) {
-                for (int j = 0; j < row1.length; j++) {
+
+            for (int i = 0; i < matrix1.length; i++) {
+                for (int j = 0; j < matrix1[i].length; j++) {
                     matrix1[i][j] = Integer.toString(matrix[i][j]);
                     if (matrix[i][j] % 3 == 0) {
                         matrix1[i][j] = c1;
@@ -114,7 +114,6 @@ public class HomeWork3 {
 
             }
 
-        }
         for (int[] row : matrix) {
             System.out.println(Arrays.toString(row));
         }
