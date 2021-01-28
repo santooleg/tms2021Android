@@ -90,22 +90,18 @@ public class HomeWork3 {
         int[][] matrix = new int[higth][wigth];
         Random random = new Random();
 
-        for (int[] row : matrix) {
-            for (int i = 0; i < matrix.length; i++) {
-                row[i] = random.nextInt(100);
+        for (int[]row : matrix) {
+            for (int i = 0; i < row.length; i++) {
 
-                for (int j = 0; j < matrix.length; j++) {
-                    row[j] = random.nextInt(100);
-
-                }
+               row[i] = random.nextInt(100);
             }
         }
         String[][] matrix1 = new String[higth][wigth];
 
 
         for (String[] row1 : matrix1) {
-            for (int i = 0; i < matrix1.length; i++) {
-                for (int j = 0; j < matrix1.length; j++) {
+            for (int i = 0; i < row1.length; i++) {
+                for (int j = 0; j < row1.length; j++) {
                     matrix1[i][j] = Integer.toString(matrix[i][j]);
                     if (matrix[i][j] % 3 == 0) {
                         matrix1[i][j] = c1;
