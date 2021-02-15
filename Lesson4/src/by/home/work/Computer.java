@@ -5,70 +5,69 @@ import java.util.Scanner;
 
 public class Computer {
 
-    private String cpu;
-    private int ram;
-    private int hdd;
-    private boolean work;
+    private final String CPU = "AMD Razen 4GHz 8 core";
+    private final String SSD = "512GB0";
+    private final String RAM = "16GB";
+    private int countLifeCycle = 10;
+    private ComputerCondition computerCondition;
+    Random random = new Random();
+    Scanner scanner = new Scanner(System.in);
 
-    public Computer() {
+    {
+        computerCondition = ComputerCondition.STATE_OFF;
+    }
+
+  public void turnOn() {
+      System.out.println("Input 0 or 1 : ");
+      switch (computerCondition) {
+          case STATE_ON:
+              System.out.println("Computer is working");
+              break;
+          case STATE_OFF:
+              if (countLifeCycle > 0 && random.nextInt(2) == scanner.nextInt()) {
+                  computerCondition = ComputerCondition.STATE_ON;
+                  System.out.println("Computer ON");
+              } else {
+                  System.out.println("Computer broken!");
+                  computerCondition = ComputerCondition.STATE_BREAK;
+              }
+              break;
+          case STATE_BREAK:
+              System.out.println("Computer broken!");
+
+      }
 
     }
 
-    public Computer(String cpu, int ram, int hdd) {
-        this.cpu = cpu;
-        this.ram = ram;
-        this.hdd = hdd;
-    }
+    public void turnOff(){
+        System.out.println("Input 0 or 1 :");
+        switch (computerCondition) {
+            case STATE_ON:
+                if (countLifeCycle > 0 && random.nextInt(2) == scanner.nextInt()){
+                    countLifeCycle--;
+                    computerCondition = ComputerCondition.STATE_OFF;
+                    System.out.println("Computer OFF");
+                } else {
+                    System.out.println("Computer broken!");
+                    computerCondition = ComputerCondition.STATE_BREAK;
 
-    public void info() {
-        System.out.println("I have computer at home : " + cpu + " " + "RAM : " + ram + " " + " HDD : " + hdd);
-    }
-
-    public void push() {
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Inter 0 or 1 ");
-        int a = scanner.nextInt();
-        int b = random.nextInt(2);
-        if (a == b) {
-            System.out.println("Computer is on!");
-        } else {
-            System.out.println("Computer BENG!!!");
+                }
+                break;
         }
-
+    }
+    public String info() {
+        System.out.println("My computer : " + CPU + SSD + RAM);
+        return computerCondition.name();
 
     }
 
 
-    public String getCpu() {
-        return cpu;
+
+
+    public ComputerCondition getComputerStatus() {
+        return computerCondition;
     }
 
-    public void setCpu(String cpu) {
-        this.cpu = cpu;
-    }
 
-    public int getRam() {
-        return ram;
-    }
 
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
-    public int getHdd() {
-        return hdd;
-    }
-
-    public void setHdd(int hdd) {
-        this.hdd = hdd;
-    }
-
-    public boolean isWork() {
-        return work;
-    }
-
-    public void setWork(boolean work) {
-        this.work = work;
-    }
 }

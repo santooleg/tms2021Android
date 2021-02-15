@@ -146,7 +146,7 @@ public class HomeWork3 {
                 System.out.print(i + " ");
         }
 
-
+        System.out.println("\b\b");
     }
 
 
