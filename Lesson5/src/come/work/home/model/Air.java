@@ -11,8 +11,8 @@ public class Air extends Transport {
     public Air(){
 
     }
-    public Air(String model, int capacity, int body, int speed, int wingspan, int minimumRunwayLengthForTakeOff) {
-        super(model, capacity, body, speed);
+    public Air(String model, int capacity, int body, int speed,int power, int wingspan, int minimumRunwayLengthForTakeOff) {
+        super(model, capacity, body, speed, power);
         this.wingspan = wingspan; //m
         this.minimumRunwayLengthForTakeOff = minimumRunwayLengthForTakeOff; //m
 

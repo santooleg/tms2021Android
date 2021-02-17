@@ -8,11 +8,12 @@ public class LandTransport<distance> extends Transport {
     private int wheels; // колеса
     private int fuelConsumption; // litres per 100 km;
 
-    public LandTransport(String model, int capacity, int body, int speed, int wheels, int fuelConsumption){
-        super(model, capacity, body, speed);
+    public LandTransport(String model, int capacity, int body, int speed, int power, int wheels, int fuelConsumption ){
+        super(model, capacity, body, speed, power);
         this.wheels = wheels;
         this.fuelConsumption = fuelConsumption;
     }
+
 
 
 
