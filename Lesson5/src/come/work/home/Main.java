@@ -29,9 +29,11 @@ public class Main {
         Civil boing = new Civil("Boing", 1700, 15000,700,1,4,75,135,true);
         boing.infoAirCivil();
 
-        Military mig = new Military("MIG", 2500, 4000,1000,1,6,25,15,true);
+        Military mig = new Military("MIG", 2500, 4000,1000,1,6,25,15,false);
         mig.infoAirMilitary();
+        mig.controlEjection();
         mig.puchMissiles();
+
 
 
 

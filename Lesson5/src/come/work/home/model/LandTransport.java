@@ -4,7 +4,7 @@ import come.work.home.Transport;
 
 import java.util.Scanner;
 
-public class LandTransport<distance> extends Transport {
+public class LandTransport extends Transport {
     private int wheels; // колеса
     private int fuelConsumption; // litres per 100 km;
 

@@ -1,5 +1,6 @@
 package come.work.home.model;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Military extends Air {
@@ -23,6 +24,21 @@ public class Military extends Air {
                 "\n max speed km/h : " + getSpeed() +
                 "\n wingspan m  :" + getWingspan() + "\n minimum runway m: " + getMinimumRunwayLengthForTakeOff() +
                 "\n missiles :" + getMissiles() + " \n ejection system " + ejectionSystem);
+    }
+
+    public boolean controlEjection(){
+
+
+            if( ejectionSystem == true){
+                System.out.println("Ejection system ON");
+                return true;
+
+            }else {
+                System.out.println("Ejection system OFF");
+                return false;
+            }
+
+
     }
 
     public void puchMissiles() {
