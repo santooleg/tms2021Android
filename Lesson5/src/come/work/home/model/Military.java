@@ -42,7 +42,6 @@ public class Military extends Air {
         m = getMissiles();
         System.out.println("Inter Missiles for start!!!");
         do {
-
             do {
                 missil = scanner.nextInt();
                 if (missil > m) {

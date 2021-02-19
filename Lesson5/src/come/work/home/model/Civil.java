@@ -10,7 +10,6 @@ public class Civil extends Air{
     }
 
     public Civil(String model, int capacity, int body, int speed, int power, int wingspan, int minimumRunwayLengthForTakeOff, int numberPassengers, boolean businessClass){
-
         super(model, capacity, body, speed, power, wingspan, minimumRunwayLengthForTakeOff);
         this.numberPassengers = numberPassengers;
         this.businessClass = businessClass;
@@ -22,6 +21,7 @@ public class Civil extends Air{
                 "\n wingspan m  :" + getWingspan()+ "\n minimum runway m: " + getMinimumRunwayLengthForTakeOff() +
                 "\n passengers :" + getNumberPassengers() + " \n business class " + businessClass);
     }
+
     public void lodingPassenger(){
         Scanner scanner = new Scanner(System.in);
         int passenger;
