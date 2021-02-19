@@ -18,12 +18,9 @@ public class Truck extends LandTransport{
 
     public void lodingCarrier() {
         Scanner scanner = new Scanner(System.in);
-
         int carrier;
         System.out.println("How many kilograms do you want to load?");
-
         carrier = scanner.nextInt();
-
         if (carrier > getLoadCarrier()) {
             System.out.println("\n" +
                     "You need a bigger truck!");
