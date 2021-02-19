@@ -5,15 +5,7 @@ import come.work.home.model.*;
 public class Main {
     public static void main(String[] args) {
 
-
         Transport audi = new Transport("Audi", 100, 1500, 222,1);
-
-
-
-
-
-
-
 
         Passenger audi2 = new Passenger("AUDI",100,1500,200, 1, 4,12,"SEDAN",6);
         audi2.infoAutoPassenger();
@@ -23,9 +15,6 @@ public class Main {
         maz.infoAutoTruck();
         maz.lodingCarrier();
 
-
-
-
         Civil boing = new Civil("Boing", 1700, 15000,700,1,4,75,135,true);
         boing.infoAirCivil();
 
@@ -33,11 +22,5 @@ public class Main {
         mig.infoAirMilitary();
         mig.controlEjection();
         mig.puchMissiles();
-
-
-
-
-
-
     }
 }

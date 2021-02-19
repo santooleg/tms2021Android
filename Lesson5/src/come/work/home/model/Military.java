@@ -1,6 +1,5 @@
 package come.work.home.model;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Military extends Air {
@@ -8,15 +7,12 @@ public class Military extends Air {
     private boolean ejectionSystem;
 
     public Military() {
-
     }
 
     public Military(String model, int capacity, int body, int speed,int power, int wingspan, int minimumRunwayLengthForTakeOff, int missiles, boolean ejectionSystem) {
-
         super(model, capacity, body, speed, power, wingspan, minimumRunwayLengthForTakeOff);
         this.missiles = missiles;
         this.ejectionSystem = ejectionSystem;
-
     }
 
     public void infoAirMilitary() {
@@ -27,23 +23,16 @@ public class Military extends Air {
     }
 
     public boolean controlEjection(){
-
-
             if( ejectionSystem == true){
                 System.out.println("Ejection system ON");
                 return true;
-
             }else {
                 System.out.println("Ejection system OFF");
                 return false;
             }
-
-
     }
 
     public void puchMissiles() {
-
-
         if (getMissiles() == 0) {
             System.out.println(" NO remained MISSILES !!!");
         }
@@ -52,8 +41,6 @@ public class Military extends Air {
         int m;
         m = getMissiles();
         System.out.println("Inter Missiles for start!!!");
-
-
         do {
 
             do {
@@ -67,8 +54,6 @@ public class Military extends Air {
             System.out.println(" has " + m + " missiles left ");
         } while (m > 0);
         System.out.println(" NO remained MISSILES !!!");
-
-
     }
 
     public int getMissiles() {

@@ -8,9 +8,7 @@ public class Transport  {
     private int power ;
     private final double cof = 0.74;
 
-
     public Transport() {
-
     }
 
     public Transport(String model, int capacity, int body, int speed, int power) {
@@ -19,20 +17,14 @@ public class Transport  {
         this.body = body;         // kg
         this.speed = speed;        //km/h
         this.power = power;
-
-
-
     }
 
     public void info(){
         System.out.println("My car : " + model + capacity + body + speed + power);
-
     }
-
 
     public int getPower() {
         power = (int) (getCapacity() * cof);
-
         return power;
     }
 
@@ -71,7 +63,4 @@ public class Transport  {
     public void setModel(String model) {
         this.model = model;
     }
-
-
-
 }

@@ -9,32 +9,28 @@ public class Truck extends LandTransport{
         super(model, capacity, body, speed, power, wheels, fuelConsumption);
         this.loadCarrier = loadCarrier;
     }
+
     public void infoAutoTruck(){
         System.out.println("Truck model : " + getModel()  + " \n  capacity hp : " + getCapacity() + "\n  body kg : " + getBody() +
                 "\n max speed km/h : " + getSpeed() +  "\n power h : "+ getPower()  + "\n whells :" + getWheels()+ "\n fuel consumption, litres per 100 km: " + getFuelConsumption() +
                 "\n load carrier kg: :" + getLoadCarrier());
     }
 
-
-    public void lodingCarrier(){
+    public void lodingCarrier() {
         Scanner scanner = new Scanner(System.in);
-        int carrier;
 
+        int carrier;
         System.out.println("How many kilograms do you want to load?");
+
         carrier = scanner.nextInt();
 
-            if (carrier > getLoadCarrier()) {
-                System.out.println("\n" +
-                        "You need a bigger truck!");
-
-            } else {
-                System.out.println("Happy road!");
-
-            }
-
-
+        if (carrier > getLoadCarrier()) {
+            System.out.println("\n" +
+                    "You need a bigger truck!");
+        } else {
+            System.out.println("Happy road!");
+        }
     }
-
 
     public int getLoadCarrier() {
         return loadCarrier;
