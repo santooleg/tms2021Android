@@ -1,13 +1,14 @@
 package сome.shop.work.model;
 
-public class Goods {
+import java.util.Objects;
+
+public class Goods  {
     private int id;
     private String name;
     private String type;
     private int price;
 
     public Goods() {
-
     }
 
     public Goods(int id, String name, String type, int price) {
@@ -15,10 +16,6 @@ public class Goods {
         this.name = name;
         this.type = type;
         this.price = price;
-    }
-
-    public void infoGoods(){
-        System.out.println("Goods : " + id + name + type + price);
     }
 
     public int getId() {
@@ -62,4 +59,18 @@ public class Goods {
                 ", price=" + price +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Goods)) return false;
+        Goods goods = (Goods) o;
+        return getId() == goods.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+
 }
