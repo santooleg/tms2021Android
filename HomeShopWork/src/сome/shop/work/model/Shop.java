@@ -28,5 +28,17 @@ public class Shop {
             }
         }
     }
-}
 
+    public void edit(Goods newP) {
+        boolean edit = false;
+        for (Goods p : products) {
+            if (p.getId() == newP.getId()) {
+                p.setName(newP.getName());
+                p.setType(newP.getType());
+                p.setPrice(newP.getPrice());
+                edit = true;
+                break;
+            }
+        }
+    }
+}

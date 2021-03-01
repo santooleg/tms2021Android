@@ -23,8 +23,12 @@ public class Main {
 
         max.infoShop();
         max.remove(3);
-        max.remove(5);
+        max.remove(2);
         System.out.println("New list");
+        max.infoShop();
+        System.out.println("New list");
+        Goods r = new Goods(7,"RR","rrr",33);
+        max.edit(r);
         max.infoShop();
     }
 }
