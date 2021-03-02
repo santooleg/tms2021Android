@@ -7,6 +7,7 @@ public class Shop {
     private Set<Goods> products;
 
     public Shop() {
+
         products = new LinkedHashSet<>();
     }
 
@@ -14,8 +15,19 @@ public class Shop {
         return products.add(gds);
     }
 
+    public Set<Goods> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<Goods> products) {
+        this.products = products;
+    }
+
     public void infoShop() {
         for (Goods s : products) {
+            if( s == null){
+                System.out.println("Товара нет в магазине!");
+            }
             System.out.println(s);
         }
     }
@@ -41,4 +53,5 @@ public class Shop {
             }
         }
     }
+
 }

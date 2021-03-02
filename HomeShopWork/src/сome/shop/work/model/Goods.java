@@ -1,8 +1,9 @@
 package сome.shop.work.model;
 
 import java.util.Objects;
+import java.util.Set;
 
-public class Goods  {
+public class Goods implements Comparable {
     private int id;
     private String name;
     private String type;
@@ -10,12 +11,21 @@ public class Goods  {
 
     public Goods() {
     }
+    private Set<GoodsInOrder> goodsInOrders;
 
     public Goods(int id, String name, String type, int price) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.price = price;
+    }
+
+    public Set<GoodsInOrder> getGoodsInOrders() {
+        return goodsInOrders;
+    }
+
+    public void setGoodsInOrders(Set<GoodsInOrder> goodsInOrders) {
+        this.goodsInOrders = goodsInOrders;
     }
 
     public int getId() {
@@ -73,4 +83,8 @@ public class Goods  {
         return Objects.hash(getId());
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 1;
+    }
 }
